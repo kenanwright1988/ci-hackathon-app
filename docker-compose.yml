@@ -7,6 +7,7 @@ services:
       - ./.env:/hackathon-app/.env
 
       # code
+      - ./challenges/:/hackathon-app/challenges/
       - ./accounts/:/hackathon-app/accounts/
       - ./competencies/:/hackathon-app/competencies/
       - ./custom_slack_provider/:/hackathon-app/custom_slack_provider/

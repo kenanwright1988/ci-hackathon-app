@@ -1,0 +1,17 @@
+[
+    {
+        "model": "challenges.challenge",
+        "pk": 1,
+        "fields": {
+            "title": "Example Challenge",
+            "description": "Solve the given problem using the most efficient algorithm.",
+            "difficulty": "Medium",
+            "problem": "Given a sorted array of integers, return the index of the target element. If the target element is not found, return -1.",
+            "points": 50,
+            "created_at": "2025-03-01T00:00:00Z",
+            "due_date": "2025-03-07T23:59:59Z",
+            "published_date": "2025-03-01T00:00:00Z",
+            "suggested_solution": "The suggested solution involves using a binary search algorithm to optimize the search process."
+        }
+    }
+]

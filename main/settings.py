@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "resources",
     "showcase",
     "teams",
+    "challenges",
 ]
 
 MIDDLEWARE = [

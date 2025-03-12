@@ -17,10 +17,15 @@
                 <div class="card-content"><p>Each week we will post a new challenge for you to solve. The challenge will be posted on Monday and you will have until Sunday to submit your solution. 
                     The solution will be posted the following Monday.</p></div>
                     <br>
-                    <h1>Welcome to this weeks challenge!</h1>
-                    <p>Discription: {{ challenge.discription}}</p>
-                    <input type="text" id="solution" name="solution" placeholder="Enter your solution here">
-                    <button id="submit">Submit</button>
+                    {% if challenge %}
+                        <h1>Welcome to this week's challenge!</h1>
+                        <p>Description: {{ challenge.description }}</p>
+                        <p>Problem: {{ challenge.problem }}</p>
+                        <input type="text" id="solution" name="solution" placeholder="Enter your solution here">
+                        <button id="submit">Submit</button>
+                    {% else %}
+                        <p>No challenges available at the moment.</p>
+                    {% endif %}
                     <br>
             </div>
         </div>

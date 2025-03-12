@@ -1,7 +1,13 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import *
+from django.shortcuts import get_object_or_404
+
+from django.shortcuts import render
+from django.utils import timezone
+from .models import Challenge
 
 def view_challenges(request):
-    challenge = Challenge.objects.get(published_date__lte=timezone.now(), due_date__gte=timezone.now())
-    return render(request, 'view_challenges.html' , {'challenge': challenge})
+    challenges = Challenge.objects.all()
+    challenge = challenges.first() if challenges.exists() else None
+    return render(request, 'view_challenges.html', {'challenge': challenge})
